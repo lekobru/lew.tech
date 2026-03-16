@@ -1,4 +1,4 @@
-﻿float Weapon_Spread;
+float Weapon_Spread;
 
 void* Original_Weapon_Spread_Caller;
 
@@ -10,8 +10,7 @@ void* __thiscall Redirected_Weapon_Spread(void* Weapon)
 
 		return (decltype(&Redirected_Weapon_Spread)(Original_Weapon_Spread_Caller))(Weapon);
 	}
-
-	Weapon_Spread = *(float*)((unsigned __int32)__builtin_frame_address(0) + 72);
+	Weapon_Spread = 0.f;
 
 	return nullptr;
 }
